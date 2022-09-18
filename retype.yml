@@ -3,7 +3,7 @@ output: .retype
 url: docsdev.erisprotocol.com
 
 branding:
-  title: Eris Protocol
+  title: ERIS
   logo: static/logos/logo.png
   logoDark: static/logos/logo-dark.png
 
@@ -16,3 +16,13 @@ links:
 
 footer:
   copyright: "&copy; Copyright {{ year }} - Eris Protocol - All rights reserved."
+  links:
+    - text: Twitter
+      link: https://twitter.com/eris_protocol
+      target: blank
+    - text: Telegram
+      link: https://t.me/eris_protocol
+      target: blank
+    - text: GitHub
+      link: https://github.com/erisprotocol
+      target: blank
