@@ -1,0 +1,12 @@
+{
+  "name": "erisprotocol-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/erisprotocol/docs.git",
+  "author": "Devs <devs@erisprotocol.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "retype watch"
+  }
+}
