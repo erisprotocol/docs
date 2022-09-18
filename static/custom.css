@@ -1,0 +1,9 @@
+@import "./font.css";
+
+* {
+  font-family: Athiti, sans-serif !important;
+}
+
+#docs-site-logo {
+  font-size: 1.6rem !important;
+}
