@@ -1,11 +1,18 @@
 input: .
 output: .retype
-url: # Add your website address here
+url: docsdev.erisprotocol.com
+
 branding:
   title: Eris Protocol
+  logo: static/logos/logo.png
+  logoDark: static/logos/logo-dark.png
+
+favicon: static/logos/favicon.png
 
 links:
-  - text: Getting Started
-    link: https://retype.com/guides/getting-started/
+  - text: App
+    link: https://erisprotocol.com/
+    target: blank
+
 footer:
-  copyright: "&copy; Copyright {{ year }}. All rights reserved."
+  copyright: "&copy; Copyright {{ year }} - Eris Protocol - All rights reserved."

@@ -8,5 +8,6 @@
   "private": false,
   "scripts": {
     "dev": "retype watch"
-  }
+  },
+  "dependencies": {}
 }
