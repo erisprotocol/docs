@@ -5,7 +5,7 @@ order: 900
 
 # Amp Extractor
 
-## First generation
+## Sneak Peak
 
 In the version iteration of the AMP EXTRACTOR you will be able to use your yield and donate them to differen projects like e.g. AngelProtocol, LUNC DAO Burn or TerraSpaces.
 Each project has a list of 10 pools where you can define how much of your yield you want to donate. 
@@ -27,7 +27,7 @@ As the split is only a logical separation based on the exchange rate, the projec
 
 ## Second generation
 
-In the second generation of our product we will extend it to also allow splitting other amp[ASSET]
+In the second generation of our product we will extend it to also allow splitting other amp[ASSET] like amp[LP] from Amp Compounder.
 
 ## Third generation
 

@@ -2,7 +2,7 @@
 # Website Terms & Conditions
 
 PLEASE READ THE ENTIRETY OF THESE TERMS AND CONDITIONS CAREFULLY BEFORE USING THE WEBSITES (AS DEFINED BELOW).
-NOTHING HEREIN CONSTITUTES LEGAL, FINANCIAL, BUSINESS OR TAX ADVICE AND YOU SHOULD CONSULT YOUR OWN LEGAL, FINANCIAL, TAX OR OTHER PROFESSIONAL ADVISOR(S) BEFORE ENGAGING IN ANY ACTIVITY IN CONNECTION ERIS. (THE **SITE OPERATOR**) SHALL NOT BE LIABLE FOR ANY KIND OF DIRECT OR INDIRECT DAMAGE OR LOSS WHATSOEVER WHICH YOU MAY SUFFER IN CONNECTION WITH ACCESSING THE PAPER, DECK OR OTHER MATERIAL RELATING TO ERIS PROTOCOL OR PUBLISHED IN CONNECTION WITH ERIS PROTOCOL (INCLUDING, FOR THE AVOIDANCE OF DOUBT, ANY CONTENT PUBLISHED ON SOCIAL MEDIA ACCOUNTS MAINTAINTED BY PERSONS CONNECTED WITH ERIS PROTOCOL) (COLLECTIVELY, THE **TOKEN DOCUMENTATION**) AVAILABLE ON THE WEBSITES AT HTTPS://WWW.ERISPROTOCOL.COM (THE **WEBSITES**, INCLUDING ANY SUB-DOMAINS THEREON).
+NOTHING HEREIN CONSTITUTES LEGAL, FINANCIAL, BUSINESS OR TAX ADVICE AND YOU SHOULD CONSULT YOUR OWN LEGAL, FINANCIAL, TAX OR OTHER PROFESSIONAL ADVISOR(S) BEFORE ENGAGING IN ANY ACTIVITY IN CONNECTION ERIS. (THE **SITE OPERATOR**) SHALL NOT BE LIABLE FOR ANY KIND OF DIRECT OR INDIRECT DAMAGE OR LOSS WHATSOEVER WHICH YOU MAY SUFFER IN CONNECTION WITH ACCESSING THE PAPER, DECK OR OTHER MATERIAL RELATING TO Eris Protocol OR PUBLISHED IN CONNECTION WITH Eris Protocol (INCLUDING, FOR THE AVOIDANCE OF DOUBT, ANY CONTENT PUBLISHED ON SOCIAL MEDIA ACCOUNTS MAINTAINTED BY PERSONS CONNECTED WITH Eris Protocol) (COLLECTIVELY, THE **TOKEN DOCUMENTATION**) AVAILABLE ON THE WEBSITES AT HTTPS://WWW.ERISPROTOCOL.COM (THE **WEBSITES**, INCLUDING ANY SUB-DOMAINS THEREON).
 
 **By using the Websites you confirm that you accept these Terms and that you agree to comply with them. If you do not agree to these Terms, you must not use our Websites.**
 
@@ -82,7 +82,7 @@ You acknowledge and agree that blockchain technologies and related assets are su
 
 ### 2.12 Technological risks
 
-The technologies used in connection with the Websites and ERIS Protocol generally are highly experimental and evolving. They are subject to many risks including, but not limited to, hacking attacks. The open-source code should be reviewed by an expert in such technologies, and you should use them solely at your own risk. Such events may lead to the complete theft, loss, forfeiture or inaccessibility of all digital assets. We do not assume any liability or responsibility for any of the foregoing matters. You must not attempt to gain unauthorised access to our Websites, the server on which our Websites is stored or any server, computer or database connected to our Websites.
+The technologies used in connection with the Websites and Eris Protocol generally are highly experimental and evolving. They are subject to many risks including, but not limited to, hacking attacks. The open-source code should be reviewed by an expert in such technologies, and you should use them solely at your own risk. Such events may lead to the complete theft, loss, forfeiture or inaccessibility of all digital assets. We do not assume any liability or responsibility for any of the foregoing matters. You must not attempt to gain unauthorised access to our Websites, the server on which our Websites is stored or any server, computer or database connected to our Websites.
 
 ### 2.13 We may transfer these Terms to someone else
 
@@ -108,7 +108,7 @@ Provided that you adhere to and comply with these Terms in all respects, you are
 
 ### 3.2 Code licence
 
-The licence in respect of the code used in connection with ERIS Protocol is available at [https://github.com/erisprotocol/eris-contracts], and will be freely licensed under the applicable licence set out thereon.
+The licence in respect of the code used in connection with Eris Protocol is available at [https://github.com/erisprotocol/eris-contracts], and will be freely licensed under the applicable licence set out thereon.
 
 ## 4. Permitted and prohibited uses of our Websites
 
@@ -156,7 +156,7 @@ You will, and shall at your own expense, ensure compliance with all laws, regula
 
 ### 5.4 Absence of sanctions
 
-You are not, and are not acting on behalf of any other person who is, identified on any list of prohibited parties or sanctions list under any law or by any nation or government, state or other political subdivision thereof, or any entity exercising legislative, judicial or administrative functions of or relating to government. The tokens or other funds used to purchase $ERIS or otherwise use ERIS Protocol are not derived from, and do not otherwise represent the proceeds of, any activities done in violation or contravention of any law.
+You are not, and are not acting on behalf of any other person who is, identified on any list of prohibited parties or sanctions list under any law or by any nation or government, state or other political subdivision thereof, or any entity exercising legislative, judicial or administrative functions of or relating to government. The tokens or other funds used to purchase $ERIS or otherwise use Eris Protocol are not derived from, and do not otherwise represent the proceeds of, any activities done in violation or contravention of any law.
 
 ### 5.5 Restricted Jurisdictions
 
@@ -170,7 +170,7 @@ To the fullest extent permitted by law, notwithstanding anything to the contrary
 
 ### 6.2 Directors etc.
 
-All provisions of these Terms which disclaim or limit obligations or liabilities of the Site Operator shall also apply, mutatis mutandis, to the officers, directors, members, employees, independent contractors, agents, stockholders, debtholders and affiliates of Site Operator and any of the project team members who have worked on ERIS Protocol or any project to develop ERIS Protocol in any way whatsoever.
+All provisions of these Terms which disclaim or limit obligations or liabilities of the Site Operator shall also apply, mutatis mutandis, to the officers, directors, members, employees, independent contractors, agents, stockholders, debtholders and affiliates of Site Operator and any of the project team members who have worked on Eris Protocol or any project to develop Eris Protocol in any way whatsoever.
 
 ## 7. Privacy policy
 
