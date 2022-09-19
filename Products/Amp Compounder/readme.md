@@ -3,7 +3,7 @@ icon: issue-draft
 order: 800
 ---
 
-# [Redacted]
+# Amp Compounder
 
 ## Sneak Peak 
 
@@ -16,6 +16,6 @@ Instead of extracting value through a Eris Platform token, we will directly let 
 
 - Deposit Fees: 0 %
 - Performance Fees
-  - 2 % to amp[TOKEN] holders 
-  - 3 % Protocol Treasury
+  - 1 % to amp[TOKEN] holders 
+  - 4 % Protocol Treasury
 - Withdrawal Fee: 0 %

@@ -3,6 +3,7 @@ icon: issue-draft
 order: 900
 ---
 
+# Amp Extractor
 
 ## First generation
 
@@ -31,3 +32,20 @@ In the second generation of our product we will extend it to also allow splittin
 ## Third generation
 
 As the technology enables the possibility of splitting yield and principle in any parts, we will also allow the usage of the yield for other investment strategies. Possibilities are DCA, Portfolio building and vesting.
+
+
+# Fees
+For our own amp[TOKEN / LP] we will not charge any fees for product usage.
+
+- Deposit Fees: 0 %
+- Performance Fees: 
+  - 0 % to Protocol Treasury
+- Withdrawal Fee: 0 %
+
+For other liquid staking derivates we will charge a fee, that is distributed to our amp[TOKEN] users. Performance fee is charged based on the underlying asset performance.
+
+- Deposit Fees: 0 %
+- Performance Fees: 
+  - 1 % to amp[TOKEN] holders
+  - 1 % to Protocol Treasury
+- Withdrawal Fee: 0 %
