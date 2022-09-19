@@ -11,6 +11,7 @@ The roadmap of each product can be seen in the products section.
 :::no-points
 
 - :icon-issue-closed: Launch Liquid Staking (see [Amplifier](./../products/amplifier))
+  - :icon-issue-closed: Launch on Terra
   - :icon-issue-closed: Launch on Terra Classic
   - :icon-issue-draft: Launch on Kujira
   - :icon-issue-draft: Launch on Juno
