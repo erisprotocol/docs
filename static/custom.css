@@ -1,9 +1,126 @@
 @import "./font.css";
 
-* {
-  font-family: Athiti, sans-serif !important;
+:root {
+  --primary: #f27539; /* rgb(242, 117, 57) */
+  --primary-darken: #ff3800;
+  --to: #ffc900;
+
+  --primary-darken-transparent: #ff370010;
+  --to-transparent: #ffc90010;
+
+  --gradient: linear-gradient(90deg, var(--primary-darken), var(--to));
+  --gradient-transparent: linear-gradient(
+    90deg,
+    var(--primary-darken-transparent),
+    var(--to-transparent)
+  );
+}
+
+h1 *,
+h2 *,
+h3 *,
+h4 *,
+h5 * {
+  font-family: Aldrich, sans-serif !important;
+  font-weight: 400;
+}
+
+.bg-blue-100 {
+  background-color: rgba(242, 117, 57, 0.2) !important;
+}
+
+.bg-blue-500 {
+  background-color: rgba(242, 117, 57, 0.6) !important;
+}
+
+.text-blue-500 {
+  color: var(--primary) !important;
+}
+.hover\:text-blue-500:hover {
+  color: var(--primary) !important;
+}
+
+@media (min-width: 960px) {
+  .md\:text-blue-500 {
+    color: var(--primary) !important;
+  }
+}
+
+.docs-markdown a:not(.no-link) {
+  color: var(--primary) !important;
+}
+
+.docs-markdown h1 .header-anchor-trigger:hover,
+.docs-markdown h2 .header-anchor-trigger:hover,
+.docs-markdown h3 .header-anchor-trigger:hover,
+.docs-markdown h4 .header-anchor-trigger:hover,
+.docs-markdown h5 .header-anchor-trigger:hover,
+.docs-markdown h6 .header-anchor-trigger:hover {
+  color: var(--primary-darken) !important;
+}
+
+html {
+  font-size: 18px;
+  overflow-y: scroll;
+}
+
+::selection {
+  background-color: rgba(242, 117, 57, 0.2);
 }
 
 #docs-site-logo {
   font-size: 2rem !important;
+}
+
+#docs-site-logo span:last-child {
+  margin-top: 8px;
+}
+
+#docs-site-logo * {
+  font-family: Aldrich, sans-serif !important;
+  font-weight: 400;
+}
+
+* {
+  font-family: Athiti, sans-serif !important;
+  font-weight: 400;
+}
+
+.dark .dark\:bg-dark-850 {
+  background: black !important;
+}
+
+.dark .dark\:bg-dark-800 {
+  background: black !important;
+}
+
+.bg-white .black {
+  display: none;
+}
+
+.dark .black {
+  display: block !important;
+}
+
+.dark .white {
+  display: none !important;
+}
+
+.no-points ul {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+.no-points ul ul {
+  list-style-type: none;
+}
+.no-points ul li svg {
+  margin-right: 0.5rem;
+}
+
+.plus ul {
+  list-style-type: "+  ";
+}
+
+.minus ul {
+  list-style-type: "-  ";
 }
