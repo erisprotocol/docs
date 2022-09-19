@@ -33,10 +33,21 @@ h5 * {
   background-color: rgba(242, 117, 57, 0.6) !important;
 }
 
+.hover\:bg-blue-200:hover {
+  background-color: rgba(242, 117, 57, 0.2) !important;
+}
+
+.group:hover .group-hover\:text-blue-500 {
+  color: rgba(242, 117, 57, 0.6) !important;
+}
+
 .text-blue-500 {
   color: var(--primary) !important;
 }
 .hover\:text-blue-500:hover {
+  color: var(--primary) !important;
+}
+.hover\:text-blue-800:hover {
   color: var(--primary) !important;
 }
 
@@ -95,7 +106,7 @@ html {
 }
 
 .bg-white .black {
-  display: none;
+  display: none !important;
 }
 
 .dark .black {
@@ -106,21 +117,25 @@ html {
   display: none !important;
 }
 
+.dark strong {
+  color: white;
+}
+
 .no-points ul {
-  list-style-type: none;
-  padding-left: 1rem;
+  list-style-type: none !important;
+  padding-left: 1rem !important;
 }
 .no-points ul ul {
-  list-style-type: none;
+  list-style-type: none !important;
 }
 .no-points ul li svg {
-  margin-right: 0.5rem;
+  margin-right: 0.5rem !important;
 }
 
 .plus ul {
-  list-style-type: "+  ";
+  list-style-type: "+  " !important;
 }
 
 .minus ul {
-  list-style-type: "-  ";
+  list-style-type: "-  " !important;
 }
