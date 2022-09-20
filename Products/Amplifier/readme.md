@@ -43,7 +43,7 @@ When using normal staking, your coins are locked and can't be used for other pro
 
 ### Disadvantages
 - Smart contract risks
-- Voting in Governance not possible yet (See [Roadmap](./../../roadmap-and-vision/))
+- Voting in Governance not possible yet (See [Milestones](./../../milestones/))
 
 ## Fees
 

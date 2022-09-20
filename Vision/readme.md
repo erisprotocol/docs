@@ -23,8 +23,18 @@ Having native liquidity on one cosmos DEFI chain brings many integration benefit
 
 Any amp[TOKEN] from any cosmos based chain can then be used on Terra.
 
+
+
+:::white
+![](2022-09-19-18-25-32.png)
+:::
+
+:::black
+![](2022-09-19-18-28-07.png)
+:::
 ## RealYield - No BS
 
 No platform token. 
 
 By holding amp[TOKEN] you will receive part of the performance fees collected by Eris Protocol on the corresponding blockchain. So all our launched products on the Terra Network will provide performance fees to ampLUNA holders.
+
