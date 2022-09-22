@@ -26,11 +26,11 @@ Any amp[TOKEN] from any cosmos based chain can then be used on Terra.
 
 
 :::white
-![](2022-09-19-18-25-32.png)
+![](2022-09-22-13-14-40.png)
 :::
 
 :::black
-![](2022-09-19-18-28-07.png)
+![](2022-09-22-13-15-06.png)
 :::
 ## RealYield - No BS
 
