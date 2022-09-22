@@ -19,7 +19,7 @@ Our home base will be Terra, but with IBC (ICS20, ICS27, ICS31) we can still con
 
 We believe that having concentrated liquidity for all liquid staking coins in the cosmos universe brings a big advantage to the Terra ecosystem.
 
-Having native liquidity on one cosmos DEFI chain brings many integration benefits for other products. Instead of introducing asynchronous complexities, dApps can seemlessly integrate with any yield generating token.
+Having native liquidity on one cosmos DEFI chain brings many integration benefits for other products. Instead of introducing asynchronous complexities, dApps can seamlessly integrate with any yield generating token.
 
 Any amp[TOKEN] from any cosmos based chain can then be used on Terra.
 
