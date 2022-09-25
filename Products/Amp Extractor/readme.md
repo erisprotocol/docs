@@ -1,5 +1,5 @@
 ---
-icon: issue-draft
+icon: issue-closed
 order: 900
 ---
 
