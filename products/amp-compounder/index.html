@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.717427197201">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720201199463">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -31,11 +31,13 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../static/logos/favicon.png" rel="icon" />
-    <link href="../../resources/css/retype.css?v=2.4.0.717427197201" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.720201199463" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.717427197201" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.720201199463" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.717427197201" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.720201199463" data-turbo-eval="false" defer></script>
+    <link href="../../resources/css/katex.css?v=2.4.0" rel="stylesheet" />
+    <script id="katex-js" type="text/javascript" src="../../resources/js/katex.js?v=2.4.0" defer></script>
 
     <link href="/static/custom.css" rel="stylesheet" />
 
@@ -180,14 +182,134 @@
         <span>Amp Compounder</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="sneak-peak">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#sneak-peak">#</doc-anchor-trigger>
-        <span>Sneak Peak</span>
-    </h2>
-</doc-anchor-target>
 <p>Autocompound your LP token rewards from providing liquidity to dexes like Astroport.
 You will receive amp[LP] tokens that are still moveable or useable in other products like the AMP Extractor.</p>
+<ul>
+<li>Terra: <a href="https://www.erisprotocol.com/#/terra/amp-compounder">https://www.erisprotocol.com/#/terra/amp-compounder</a></li>
+</ul>
+<doc-anchor-target id="process">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#process">#</doc-anchor-trigger>
+        <span>Process</span>
+    </h2>
+</doc-anchor-target>
+<div class="white"><p><figure class="content-center">
+    <img src="2022-10-27-16-43-52.png" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+</div>
+<div class="black"><p><figure class="content-center">
+    <img src="2022-10-27-16-45-02.png" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+</div>
+<doc-anchor-target id="user">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#user">#</doc-anchor-trigger>
+        <span>User</span>
+    </h3>
+</doc-anchor-target>
+<ol>
+<li>User deposits funds into the Amp Compounder Farm. For each pool with incentives there is a farm contract and a farm specific ampLP token.</li>
+<li>The Eris Amp Farm converts the deposited assets to the wanted LP token by using the Eris Zapper</li>
+<li>Afterwards it stakes the LP in the Astro generator to receive astro rewards or dual incentives</li>
+</ol>
+<doc-anchor-target id="controller">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#controller">#</doc-anchor-trigger>
+        <span>Controller</span>
+    </h3>
+</doc-anchor-target>
+<ol start="4">
+<li>We autocompound the rewards daily using a controller bot.</li>
+<li>It will claim all rewards into the Amp Farm.</li>
+<li>On these rewards Eris Protocol takes a reward fee, that is payed to the Fee collector.</li>
+<li>The rest of the rewards is converted again using Eris Zapper to the LP and restaked into the Astro Generator. That means each day the conversion rate between ampLP to LP increases, as with each compound the managed LP increases, while no new ampLP are being distributed.</li>
+</ol>
+<p>Weekly we convert the collected fees to Luna / [TOKEN] and pay it out to the Treasury and ampLUNA / amp[TOKEN] holders.</p>
+<doc-anchor-target id="deposit">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#deposit">#</doc-anchor-trigger>
+        <span>Deposit</span>
+    </h2>
+</doc-anchor-target>
+<p>You can deposit into the Amp Compounder using the following options.</p>
+<doc-anchor-target id="zap">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#zap">#</doc-anchor-trigger>
+        <span>Zap</span>
+    </h3>
+</doc-anchor-target>
+<p>Allows you to deposit into the Amp Compounder pools with any token we support.
+We will automatically convert your token to the destination LP weight, so you do not need to calculate how much you need to swap.</p>
+<p>If a swap is happening, we will show the swap path your funds take. Keep in mind, that we might not choose the best route, but use the main DEX of the ecosystem for the swap.</p>
+<p><figure class="content-center">
+    <img src="2022-10-27-15-35-06.png" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<doc-anchor-target id="tokens">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tokens">#</doc-anchor-trigger>
+        <span>Tokens</span>
+    </h3>
+</doc-anchor-target>
+<p>Allows you to deposit into the pool using the tokens from the pool you want to deposit in.
+By default we keep the ratio like the pool, so no swap is being executed.
+If you want to deposit in a single asset, remove the check of &quot;Keep 50:50 ratio&quot;. Then a swap is being executed when needed.</p>
+<p><figure class="content-center">
+    <img src="2022-10-27-15-37-49.png" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<doc-anchor-target id="lp">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#lp">#</doc-anchor-trigger>
+        <span>LP</span>
+    </h3>
+</doc-anchor-target>
+<p>If you already have an Astroport LP in your wallet, you can use the LP option to directly deposit that LP into the ampLP.</p>
+<doc-anchor-target id="staked">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#staked">#</doc-anchor-trigger>
+        <span>Staked</span>
+    </h3>
+</doc-anchor-target>
+<p>By default when you provide funds to an Astroport Pool you will not receive incentives and are only eligable if you also stake your LP tokens with the Astro Generator. If you have an Astroport LP that is staked, you can directly withdraw and deposit it into Eris Amp Compounder by using this option.</p>
+<doc-anchor-target id="apy-calculation">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#apy-calculation">#</doc-anchor-trigger>
+        <span>APY calculation</span>
+    </h2>
+</doc-anchor-target>
+<p>We are using the data from <a href="https://docs.astroport.fi/astroport/backend/apy-calculation">Astroports APY calculation</a> and
+compound the pools daily.</p>
+<p>Based on their value of APR we convert it to APY using the following formula.</p>
+<p><span class="math">\displaystyle Amplified\ APY = \left(\frac{1 + (Astroport\ Yearly\ APR * (1 - Eris\ Reward\ Fee))}{365} \right)^ {365} -1</span></p>
+<doc-anchor-target id="advantages-of-using-eris-amp-compounder">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#advantages-of-using-eris-amp-compounder">#</doc-anchor-trigger>
+        <span>Advantages of using Eris Amp Compounder</span>
+    </h2>
+</doc-anchor-target>
+<p>When using the Amp Compounder you will receive an ampLP token as your share of the pool. This has some benefits:</p>
+<ul>
+<li>possibility to use ampLP as collateral for stablecoins or lending</li>
+<li>possibility to use ampLP in the Amp Extractor</li>
+<li>transfer ampLP between wallets</li>
+</ul>
+<p>This also makes usage of auto compounding super tax efficient in some jurisdictions. You do not directly receive rewards into your wallet, but instead when you enter a pool you &quot;swap&quot; into the ampLP token and then your ampLP token grows in value by accumulating more LP tokens underneath. When you exit the pool you will later swap your ampLP token against more assets than you initially deposited.</p>
+<p>Allows you to deposit / zap directly into the pool using any supported single asset. E.g. you can enter the VKR-axlUSDC pool by providing LUNA and the rest is being calculated / swapped by the Eris Zapper.</p>
+<p>We do not extract any value using a governance token, but instead allow holders of amp[TOKEN] directly participate in the reward fee we generate.</p>
+<doc-anchor-target id="disadvantages">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#disadvantages">#</doc-anchor-trigger>
+        <span>Disadvantages</span>
+    </h2>
+</doc-anchor-target>
+<p>Even with our high focus on security and best practices, mistakes can happen and there are always risks involved</p>
 <doc-anchor-target id="fees">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#fees">#</doc-anchor-trigger>
@@ -199,8 +321,8 @@ You will receive amp[LP] tokens that are still moveable or useable in other prod
 <li>Deposit Fees: 0 %</li>
 <li>Performance Fees
 <ul>
-<li>1 % to amp[TOKEN] holders</li>
-<li>4 % Protocol Treasury</li>
+<li>2.5 % to amp[TOKEN] holders</li>
+<li>2.5 % Protocol Treasury</li>
 </ul>
 </li>
 <li>Withdrawal Fee: 0 %</li>
@@ -224,10 +346,10 @@ You will receive amp[LP] tokens that are still moveable or useable in other prod
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../products/arb-repeater/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../products/manual-arb/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Arb Repeater</span>
+                                                <span class="block mt-1">Manual Arb</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -280,6 +402,6 @@ You will receive amp[LP] tokens that are still moveable or useable in other prod
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Amp Compounder", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Amp Compounder", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: true }</script>
 </body>
 </html>

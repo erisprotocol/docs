@@ -92,9 +92,9 @@ html {
   font-weight: 400;
 }
 
-* {
+.font-body {
   font-family: Athiti, sans-serif !important;
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 
 .dark .dark\:bg-dark-850 {
