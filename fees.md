@@ -13,9 +13,9 @@ Fees that are distributed to Amplifier users will directly auto compound in the 
 Here you can see the performance fee flow and height between our products. Details can be seen in each product description.
 
 :::white
-![](2022-09-19-14-42-40.png)
+![](2022-10-27-15-29-49.png)
 :::
 
 :::black
-![](2022-09-19-14-44-11.png)
+![](2022-10-27-15-31-55.png)
 :::

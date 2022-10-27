@@ -33,7 +33,7 @@ In the second generation of our product we will extend it to also allow splittin
 As the technology enables the possibility of splitting yield and principle in any parts, we will also allow the usage of the yield for other investment strategies. Possibilities are DCA, Portfolio building and vesting.
 
 
-# Fees
+## Fees
 For our own amp[TOKEN / LP] we will not charge any fees for product usage.
 
 - Deposit Fees: 0 %
