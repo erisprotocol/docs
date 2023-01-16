@@ -5,7 +5,6 @@ order: 900
 
 # Amp Extractor
 
-
 In the version iteration of the AMP EXTRACTOR you are able to use your yield and donate it to differen projects like e.g. AngelProtocol, LUNC DAO Burn or TerraSpaces.
 Each project has a list of 10 pools where you can define how much of your yield you want to donate. 
 
