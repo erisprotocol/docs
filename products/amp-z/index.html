@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.728154249126">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.730549185123">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -31,11 +31,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../static/logos/favicon.png" rel="icon" />
-    <link href="../../resources/css/retype.css?v=2.4.0.728154249126" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.730549185123" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.728154249126" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.730549185123" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.728154249126" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.730549185123" data-turbo-eval="false" defer></script>
 
     <link href="/static/custom.css" rel="stylesheet" />
 
@@ -181,7 +181,143 @@
     </h1>
 </doc-anchor-target>
 <p>AMP Z will be an in-wallet DeFi automation product, that will automate daily / weekly tasks.</p>
-<p>More coming soon.</p>
+<doc-anchor-target id="accessing-liquidity">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#accessing-liquidity">#</doc-anchor-trigger>
+        <span>Accessing Liquidity</span>
+    </h2>
+</doc-anchor-target>
+<p>On Terra a big part of available funds are being vested or only accessed through claiming staking rewards. Amp Z is a way to yield-optimize unused potential, by automating in-wallet transactions using the authz cosmos module.</p>
+<doc-anchor-target id="setup">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#setup">#</doc-anchor-trigger>
+        <span>Setup</span>
+    </h2>
+</doc-anchor-target>
+<p>Amp Z can automate claiming yield from defined sources and depositing them to defined DeFi destinations.</p>
+<doc-anchor-target id="yield-sources">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#yield-sources">#</doc-anchor-trigger>
+        <span>Yield sources</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><strong>Staking rewards</strong>: Use your staking rewards from your vesting tokens.</li>
+<li><strong>Astroport rewards</strong>: Use your LP incentives to yield-optimize.</li>
+<li><strong>Wallet funds</strong>: Auto deposit or DCA wallet funds in DeFi products:
+<ul>
+<li>This allows automations like start unbonding vested tokens and auto deposit them into DeFi.</li>
+<li>Act as a savings account, auto transfer any balance above a certain threshhold.</li>
+<li>DCA your wallet funds into DeFi destinations, as you can set the max amount to be used.</li>
+</ul>
+</li>
+</ul>
+<p>If you want more yield sources available, let us know in our TG.</p>
+<doc-anchor-target id="yield-destinations">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#yield-destinations">#</doc-anchor-trigger>
+        <span>Yield destinations</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><strong>Amplifier</strong>: Deposit into a liquid staking derivative. After the execution your wallet will have more ampLUNA.</li>
+<li><strong>Compounder</strong>: Deposit into yield optimized and daily compounded astroport pools. After the execution your wallet will have more ampLP available.</li>
+<li><strong>Token</strong>: Swap your yield into a specific (supported) token. After the execution your wallet will have more of the token available.</li>
+</ul>
+<p>If you want more destinations available, let us know in our TG.</p>
+<doc-anchor-target id="schedule">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#schedule">#</doc-anchor-trigger>
+        <span>Schedule</span>
+    </h3>
+</doc-anchor-target>
+<p>You can define an interval on how often you want to execute your automation. Keep in mind, that operators will only execute your automation if their reward fee is higher than the gas prices they pay. So a daily schedule will probably not be executed if the compounded amount is too small.</p>
+<p>You can always manually execute an automation outside of the normal schedule.</p>
+<p><figure class="content-center">
+    <img src="2023-02-24-11-06-24.png" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<doc-anchor-target id="example-strategies">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#example-strategies">#</doc-anchor-trigger>
+        <span>Example Strategies</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="luna-degen">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#luna-degen">#</doc-anchor-trigger>
+        <span>Luna Degen</span>
+    </h3>
+</doc-anchor-target>
+<p>Claim your vesting LUNA staking rewards and auto-compound it into the ERIS LSD ampLUNA.
+<figure class="content-center">
+    <img src="2023-02-24-11-01-10.png" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<doc-anchor-target id="luna-extractor">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#luna-extractor">#</doc-anchor-trigger>
+        <span>Luna Extractor</span>
+    </h3>
+</doc-anchor-target>
+<p>Claim your vesting LUNA staking rewards and cash them out into stable coins.
+<figure class="content-center">
+    <img src="2023-02-24-11-02-20.png" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<doc-anchor-target id="astro-farmer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#astro-farmer">#</doc-anchor-trigger>
+        <span>Astro Farmer</span>
+    </h3>
+</doc-anchor-target>
+<p>Claim all your astro rewards daily and auto-compound them into ASTRO-LUNA or ASTRO-USDC pools to immediately take advantage of compounding intrest.
+<figure class="content-center">
+    <img src="2023-02-24-10-57-58.png" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<doc-anchor-target id="astro-extractor">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#astro-extractor">#</doc-anchor-trigger>
+        <span>Astro Extractor</span>
+    </h3>
+</doc-anchor-target>
+<p>Claim your astro rewards and cash them out into stable coins or other coins you believe in.
+<figure class="content-center">
+    <img src="2023-02-24-11-02-46.png" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<doc-anchor-target id="danger-must-read">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#danger-must-read">#</doc-anchor-trigger>
+        <span>Danger! MUST READ</span>
+    </h2>
+</doc-anchor-target>
+<p>All ERIS products are experimental technologies.</p>
+<p>By giving a grant to our smart contract, the smart contract can execute any smart contract interaction. The authz module is very permissive what transactions are allowed to be executed, to make the transactions we execute more secure and transparent, we have decided to only give wallet access to an auditable, hard coded smart contract. This allows you to verify what kind of actions we execute on your wallet and will never give the operators any direct access to your wallet. Only your defined actions will be executed.</p>
+<doc-anchor-target id="fee">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fee">#</doc-anchor-trigger>
+        <span>Fee</span>
+    </h2>
+</doc-anchor-target>
+<p>The fees are calculated based on the value that is being compounded from the source.</p>
+<ul>
+<li>Deposit Fees: 0 %</li>
+<li>Operator Fee: 1 %</li>
+<li>Protocol Fee
+<ul>
+<li>1 % to amp[TOKEN] holders</li>
+<li>1 % Protocol Treasury</li>
+</ul>
+</li>
+<li>Withdrawal Fee: 0 %</li>
+</ul>
 
                                 
                                 <!-- Required only on API pages -->

@@ -25,6 +25,10 @@ h5 * {
   font-weight: 400;
 }
 
+#danger-must-read * {
+  color: var(--primary) !important;
+}
+
 .bg-blue-100 {
   background-color: rgba(242, 117, 57, 0.2) !important;
 }
