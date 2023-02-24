@@ -7,6 +7,8 @@ order: 720
 
 Amp Governance allows the protocol users to decide on how the protocol delegates funds and participates in chain governance votes. We want to provide a framework for a fair, decentralized delegation and governance structure.
 
+**_Be the whale and decide on delegations and proposals of the chain, leverage your voting power and your impact by using Amp Governance._**
+
 Decentralize the approach on how we delegate protocol funds to validators and help locking liquidity in astroport to provide a stable market for lending and collateral protocols. Delegations will be calculated by a configurable set of on-chain rules. Adding new validators to join the ERIS Protocol Whitelist will still go through our centralized application process to verify hosting, team quality, community and setup monitoring. We want to allow a diversified set of validators without us interfering or controlling delegations. But we do want to incentivize in our opinion good behavior that often happens off-chain and will need some central committee or decision process.
 
 There are different mechanisms for how LSD’s currently select their validators or delegation amount.
@@ -19,35 +21,33 @@ There are different mechanisms for how LSD’s currently select their validators
 
 This is why we went back to the drawing board on how our governance process should look like.
 
-We decided to implement a 2-gauges principle that can be weighted with configuration.
-
+We decided to implement a 2-gauges principle that can be weighted with configuration. EMP-Gauge is not used for the launch and only the vAMP-Gauge is active.
 
 :::white
-![](2023-01-16-17-24-18.png)
+![](2023-02-24-10-40-57.png)
 :::
 
 :::black
-![](2023-01-16-17-23-39.png)
+![](2023-02-24-10-41-40.png)
 :::
 
-## vAMP-Gauge - Vote Escrowed ampLP
+## vAMP-Gauge - Vote Escrowed amp[TOKEN]
 
-The first gauge is our “Vote Escrowed amp[TOKEN]-[TOKEN] ampLP gauge” or short vAMP-gauge. Instead of using a governance token or only LSD locking mechanism, we allow users and validators to lock in auto-compounding LP liquidity (ampLP).
+The first gauge is our “Vote Escrowed amp[TOKEN] gauge” or short vAMP-gauge. Instead of using a governance token, we allow users to lock their amp[TOKEN].
 
 The user can decide on how long he wants to lock his funds and can choose between any time between 3 weeks minimum lock time and 2 years maximum lock time. When locking liquidity for 3 weeks the user receives ~1.3x voting power (1+(9\*3/104)) while when locking his funds for 2 years receives 10x (1+(9\*2\*52/104)).
 
-The user then can vote on up to 3 validators with his voting power. The same voting power will later be used to vote on governance proposals.
+The user then can vote on up to 3 validators with his voting power. The same voting power can be used to vote on governance proposals.
 
-### Benefit for LSD stability
+This is a major step for a LSD, as it gives back the delegation and governance power of the protocol funds back to the user, as each user can participate and vote on the protocol delegations.
 
-By incentivizing locking and increasing voting power by lock time, we want to provide a deeper liquidity to our amp[TOKEN]-[TOKEN] pools and make liquidity more predictable due to lock times.
+## Proposal gauges
 
-This also gives back the delegation power of the protocol funds back to the user, as each user can participate and vote on the protocol delegations.
-
+The same voting power that you received by locking funds in the voting escrow, can be used to vote on chain governance proposals. This allows for a direct user participation in the governance system.
 
 ## EMP - ERIS Merit Points
 
-***Note: The name EMP is not yet decided on. Also to make the protocol more automated, the EMP-gauge is optional***
+**_Note: To make the protocol more automated, the EMP-gauge are not used for now_**
 
 The second one is our ERIS Merit Points gauge - short EMP-gauge.
 
@@ -66,11 +66,8 @@ We have three ways of rewarding EMPs to Validators.
 
 By providing incentives to participate in the chain we want to increase the validators' engagement with the community. Having involved validators’ leads to a healthy system and governance.
 
-
 ## Delegations
 
-Each first Monday of every month we apply rewarded EMPs and tune both gauges, automatically apply the result to the delegation distribution and redelegate the protocol funds to the top x chosen validators.
+Each first Monday of every month we apply rewarded EMPs and tune both gauges, automatically apply the result to the delegation distribution and redelegate the protocol funds to the top 30 chosen validators.
 
-There are some safety features available, so validators will only be able to receive up to x % of the total delegations, require a min delegation % to become active and need to be verified and whitelisted.
-
-Initially the weighting will be closely watched and we will start with an even weighting between vAMP and EMP: 0.5 * EMP gauge + 0.5 * vAMP gauge = delegation percentage.
+There are some safety features available, so validators will only be able to receive up to x % of the total delegations, require a min delegation x % to become active and need to be verified and whitelisted.
