@@ -35,7 +35,7 @@ We decided to implement a 2-gauges principle that can be weighted with configura
 
 The first gauge is our “Vote Escrowed amp[TOKEN] gauge” or short vAMP-gauge. Instead of using a governance token, we allow users to lock their amp[TOKEN].
 
-The user can decide on how long he wants to lock his funds and can choose between any time between 3 weeks minimum lock time and 2 years maximum lock time. When locking liquidity for 3 weeks the user receives ~1.3x voting power (1+(9\*3/104)) while when locking his funds for 2 years receives 10x (1+(9\*2\*52/104)).
+The user can decide on how long he wants to lock his funds and can choose any time between 3 weeks minimum lock time and 2 years maximum lock time. When locking liquidity for 3 weeks the user receives ~1.3x voting power (1+(9\*3/104)) while when locking his funds for 2 years receives 10x (1+(9\*2\*52/104)).
 
 The user then can vote on up to 3 validators with his voting power. The same voting power can be used to vote on governance proposals.
 
