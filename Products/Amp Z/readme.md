@@ -64,7 +64,7 @@ Claim all your astro rewards daily and auto-compound them into ASTRO-LUNA or AST
 Claim your astro rewards and cash them out into stable coins or other coins you believe in.
 ![](2023-02-24-11-02-46.png)
 
-## Danger! MUST READ
+## Product Risk Statement - Read before using this product
 
 All ERIS products are experimental technologies.
 
@@ -74,9 +74,7 @@ By giving a grant to our smart contract, the smart contract can execute any smar
 
 The fees are calculated based on the value that is being compounded from the source.
 
-- Deposit Fees: 0 %
 - Operator Fee: 1 %
 - Protocol Fee
   - 1 % to amp[TOKEN] holders
   - 1 % Protocol Treasury
-- Withdrawal Fee: 0 %
