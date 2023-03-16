@@ -68,7 +68,7 @@ Claim your astro rewards and cash them out into stable coins or other coins you 
 
 All ERIS products are experimental technologies.
 
-By giving a grant to our smart contract, the smart contract can execute any smart contract interaction. The authz module is very permissive what transactions are allowed to be executed, to make the transactions we execute more secure and transparent, we have decided to only give wallet access to an auditable, hard coded smart contract. This allows you to verify what kind of actions we execute on your wallet and will never give the operators any direct access to your wallet. Only your defined actions will be executed.
+By giving a grant to the ampz smart contract, the smart contract can execute any other smart contract interaction with your wallet. The authz module is very permissive what transactions are allowed to be executed, to make the executed transactions more secure and transparent, the frontend will only give wallet access to an auditable, hard coded smart contract. This allows you to verify what kind of actions are being executed on your wallet and will never give the operators any direct access to your wallet. Only your defined actions will be executed.
 
 ## Fee
 
