@@ -10,7 +10,7 @@ It will convert the inputed [TOKEN/COIN] into a liquid staking derivative (LSD) 
 
 While this is our manual slow-burn arbitrage GUI, we are working on releasing a fully automated arbitrage protocol. For the details see [Arb Repeater](../arb-repeater/). It will work similiar to the manual arbitrage tool, but have a model on how and when slow-burn arbitrages are being executed.
 
-- Terra: https://www.erisprotocol.com/#/terra/manual-arbitrage
+- Terra: https://www.erisprotocol.com/terra/manual-arbitrage
 
 ## GUI
 
@@ -25,7 +25,7 @@ While this is our manual slow-burn arbitrage GUI, we are working on releasing a 
 
 ### Output
 
-- **1. Swap**: Estimation of how many tokens of the LSD you will receive 
+- **1. Swap**: Estimation of how many tokens of the LSD you will receive
 - **2. Unbond**: Calculation of the amount you received times the current exchange rate of the LSD when executing slow burn unbonding.
 - **3. Profit / Loss**: Shows if your overall swap will be profitable or not. This contains already protocol fees, but not the transaction fee.
 - **4. Withdraw**: Reminder if you use automatic unbonding, that you will need to withdraw your funds after x days on the corresponding withdraw page.
@@ -34,7 +34,6 @@ While this is our manual slow-burn arbitrage GUI, we are working on releasing a 
 ## Swap Routing
 
 For finding the best swap route between [TOKEN] and LSD we are using [TFM](www.tfm.com).
-
 
 ## Fees
 

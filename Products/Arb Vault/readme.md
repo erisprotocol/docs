@@ -1,11 +1,11 @@
 ---
-icon: issue-draft
+icon: issue-opened
 order: 700
 ---
 
-# Arb Repeater
+# Arb Vault
 
-## Sneak Peak 
+## Sneak Peak
 
 Deposit your [TOKEN] in our Eris ARB pool and connect all different liquid staking arbitrage possibilities.
 
@@ -41,16 +41,18 @@ The liquidity inside a ERIS pool has multiple states:
 Initially the asset pools will have a static execution model. For each aribtrage opportunity a specific utilization of the pool is allowed.
 
 [arb opportunity, assets from pool that can be used]
+
 - arb[TOKEN]: [0.5%, 10%] [1%, 40%], [1.5%, 70%], [2.0%,100%]
 
 ##### Example
 
-Trades | **Pool utilization** | **Arb opportunity** | **Max funds used** | **New utilization** { class="compact" }
-:--- | ---: | ---: | ---:
-**Arb 1** | 0% | 0.5% | 10% | 10%
-**Arb 2** | 10% | 1.5% | 60% | 70%
+| Trades    | **Pool utilization** | **Arb opportunity** | **Max funds used** | **New utilization** { class="compact" } |
+| :-------- | -------------------: | ------------------: | -----------------: | --------------------------------------- |
+| **Arb 1** |                   0% |                0.5% |                10% | 10%                                     |
+| **Arb 2** |                  10% |                1.5% |                60% | 70%                                     |
 
 #### Dynamic execution
+
 After the launch a dynamic execution model will be created, so the funds are used in a more efficient way.
 
 1. The arbitrage opportunity always has to be higher than the staking APR.
@@ -65,12 +67,11 @@ After the launch a dynamic execution model will be created, so the funds are use
 3. Liquidation risks
 4. Asset volatility
 
-
 ### Withdrawing Liquidity
 
 As the assets inside the ERIS pool can have multiple different states - explained in [Liquidity States](#liquidity-states) - liquidity providers cannot directly withdraw funds, as they might be unbonding at the moment.
 
-This is why withdrawing liquidity from ERIS will take longer than the unstaking period of the liquid staking providers. For LUNA we will initially set the parameter to 25 days. After the 25 days  the funds can be claimed / withdrawn by the user.
+This is why withdrawing liquidity from ERIS will take longer than the unstaking period of the liquid staking providers. For LUNA we will initially set the parameter to 25 days. After the 25 days the funds can be claimed / withdrawn by the user.
 
 If the pool has available funds in the original asset (not unbonding), we provide the possibility to immediately withdraw funds for a fee.
 
@@ -104,18 +105,18 @@ The APY can't be calculated in advance as it depends on the market conditions an
 
 ### APY Calculation
 
-**Opportunity** | **40 days** | **35 days** | **30 days** | **25 days** | **21 days** { class="compact" }
----: | ---: | ---: | ---: | ---: | ---:
-**0,5%** | 4,7% | 5,3% | 6,3% | 7,6% | 9,1%
-**1,0%** | 9,5% | 10,9% | 12,9% | 15,6% | 18,9%
-**1,5%** | 14,6% | 16,8% | 19,9% | 24,3% | 29,5%
-**2,0%** | 19,8% | 22,9% | 27,2% | 33,5% | 41,1%  
-**2,5%** | 25,3% | 29,4% | 35,0% | 43,4% | 53,6%  
-**3,0%** | 31,0% | 36,1% | 43,3% | 54,0% | 67,2%  
-**3,5%** | 36,9% | 43,2% | 52,0% | 65,2% | 81,8%
-**4,0%** | 43,0% | 50,5% | 61,2% | 77,3% | 97,7%  
-**4,5%** | 49,4% | 58,3% | 70,8% | 90,2% | 114,9%  
-**5,0%** | 56,1% | 66,3% | 81,1% | 103,9% | 133,5%
+| **Opportunity** | **40 days** | **35 days** | **30 days** | **25 days** | **21 days** { class="compact" } |
+| --------------: | ----------: | ----------: | ----------: | ----------: | ------------------------------: |
+|        **0,5%** |        4,7% |        5,3% |        6,3% |        7,6% |                            9,1% |
+|        **1,0%** |        9,5% |       10,9% |       12,9% |       15,6% |                           18,9% |
+|        **1,5%** |       14,6% |       16,8% |       19,9% |       24,3% |                           29,5% |
+|        **2,0%** |       19,8% |       22,9% |       27,2% |       33,5% |                           41,1% |
+|        **2,5%** |       25,3% |       29,4% |       35,0% |       43,4% |                           53,6% |
+|        **3,0%** |       31,0% |       36,1% |       43,3% |       54,0% |                           67,2% |
+|        **3,5%** |       36,9% |       43,2% |       52,0% |       65,2% |                           81,8% |
+|        **4,0%** |       43,0% |       50,5% |       61,2% |       77,3% |                           97,7% |
+|        **4,5%** |       49,4% |       58,3% |       70,8% |       90,2% |                          114,9% |
+|        **5,0%** |       56,1% |       66,3% |       81,1% |      103,9% |                          133,5% |
 
 ## Why use ERIS
 
@@ -125,7 +126,7 @@ Currently a lot of manual arbitrage opportunities exist, that can be tracked / n
 
 **Time** - You will not have to worry about missing any opportunities anymore, no matter what you do, where you are or if you sleep. ERIS will always check and execute arbitrage opportunities.
 
-**Fairness** - Each opportunity will be shared by the whole pool. That means not the fastest one will receive the reward, but the profit will be shared by the whole pool. 
+**Fairness** - Each opportunity will be shared by the whole pool. That means not the fastest one will receive the reward, but the profit will be shared by the whole pool.
 
 **Liquidity** - We provide Liquidity for liquid staking tokens, so that liquid staking token holders can swap through ERIS pools to get a fixed swap rate.
 
@@ -139,6 +140,6 @@ As arbitrage trading requires more complex bots and optimization techniques that
 
 - Deposit Fees: 0 %
 - Performance Fees
-  - 2 % to amp[TOKEN] holders 
+  - 2 % to amp[TOKEN] holders
   - 8 % Protocol Treasury
 - Withdrawal Fee: 0 %

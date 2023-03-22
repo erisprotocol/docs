@@ -8,9 +8,7 @@ order: 800
 Autocompound your LP token rewards from providing liquidity to dexes like Astroport.
 You will receive amp[LP] tokens that are still moveable or useable in other products like the AMP Extractor.
 
-
-
-- Terra: <https://www.erisprotocol.com/#/terra/amp-compounder>
+- Terra: <https://www.erisprotocol.com/terra/amp-compounder>
 
 ## Process
 
@@ -30,7 +28,7 @@ You will receive amp[LP] tokens that are still moveable or useable in other prod
 
 ### Controller
 
-4. We autocompound the rewards daily using a controller bot. 
+4. We autocompound the rewards daily using a controller bot.
 5. It will claim all rewards into the Amp Farm.
 6. On these rewards Eris Protocol takes a reward fee, that is payed to the Fee collector.
 7. The rest of the rewards is converted again using Eris Zapper to the LP and restaked into the Astro Generator. That means each day the conversion rate between ampLP to LP increases, as with each compound the managed LP increases, while no new ampLP are being distributed.
@@ -59,9 +57,11 @@ If you want to deposit in a single asset, remove the check of "Keep 50:50 ratio"
 ![](2022-10-27-15-37-49.png)
 
 ### LP
+
 If you already have an Astroport LP in your wallet, you can use the LP option to directly deposit that LP into the ampLP.
 
 ### Staked
+
 By default when you provide funds to an Astroport Pool you will not receive incentives and are only eligable if you also stake your LP tokens with the Astro Generator. If you have an Astroport LP that is staked, you can directly withdraw and deposit it into Eris Amp Compounder by using this option.
 
 ## APY calculation
@@ -97,6 +97,6 @@ Instead of extracting value through a Eris Platform token, we will directly let 
 
 - Deposit Fees: 0 %
 - Performance Fees
-  - 2.5 % to amp[TOKEN] holders 
+  - 2.5 % to amp[TOKEN] holders
   - 2.5 % Protocol Treasury
 - Withdrawal Fee: 0 %

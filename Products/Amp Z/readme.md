@@ -1,5 +1,5 @@
 ---
-icon: issue-opened
+icon: issue-closed
 order: 719
 ---
 
