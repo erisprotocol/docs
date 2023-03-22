@@ -3,39 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732290281979">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732811267734">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>Arb Repeater</title>
-    <meta name="title" content="Arb Repeater">
+    <title>Arb Vault</title>
+    <meta name="title" content="Arb Vault">
     <meta name="description" content="Deposit your [TOKEN] in our Eris ARB pool and connect all different liquid staking arbitrage possibilities." />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://docs.erisprotocol.com/products/arb-repeater/" />
+    <link rel="canonical" href="https://docs.erisprotocol.com/products/arb-vault/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.erisprotocol.com/products/arb-repeater/">
-    <meta property="og:title" content="Arb Repeater">
+    <meta property="og:url" content="https://docs.erisprotocol.com/products/arb-vault/">
+    <meta property="og:title" content="Arb Vault">
     <meta property="og:description" content="Deposit your [TOKEN] in our Eris ARB pool and connect all different liquid staking arbitrage possibilities.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://docs.erisprotocol.com/products/arb-repeater/">
-    <meta property="twitter:title" content="Arb Repeater">
+    <meta property="twitter:url" content="https://docs.erisprotocol.com/products/arb-vault/">
+    <meta property="twitter:title" content="Arb Vault">
     <meta property="twitter:description" content="Deposit your [TOKEN] in our Eris ARB pool and connect all different liquid staking arbitrage possibilities.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../static/logos/favicon.png" rel="icon" />
-    <link href="../../resources/css/retype.css?v=2.4.0.732290281979" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.732811267734" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.732290281979" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.732811267734" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.732290281979" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.732811267734" data-turbo-eval="false" defer></script>
 
     <link href="/static/custom.css" rel="stylesheet" />
 
@@ -174,10 +174,10 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="arb-repeater" class="break-words">
+<doc-anchor-target id="arb-vault" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#arb-repeater">#</doc-anchor-trigger>
-        <span>Arb Repeater</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#arb-vault">#</doc-anchor-trigger>
+        <span>Arb Vault</span>
     </h1>
 </doc-anchor-target>
 <doc-anchor-target id="sneak-peak">
@@ -253,7 +253,7 @@ The liquidity inside a ERIS pool has multiple states:</p>
 <th style="text-align: right;"><strong>Pool utilization</strong></th>
 <th style="text-align: right;"><strong>Arb opportunity</strong></th>
 <th style="text-align: right;"><strong>Max funds used</strong></th>
-<th style="text-align: right;"><strong>New utilization</strong></th>
+<th><strong>New utilization</strong> </th>
 </tr>
 </thead>
 <tbody>
@@ -262,14 +262,14 @@ The liquidity inside a ERIS pool has multiple states:</p>
 <td style="text-align: right;">0%</td>
 <td style="text-align: right;">0.5%</td>
 <td style="text-align: right;">10%</td>
-<td style="text-align: right;">10%</td>
+<td>10%</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Arb 2</strong></td>
 <td style="text-align: right;">10%</td>
 <td style="text-align: right;">1.5%</td>
 <td style="text-align: right;">60%</td>
-<td style="text-align: right;">70%</td>
+<td>70%</td>
 </tr>
 </tbody>
 </table>
@@ -306,7 +306,7 @@ The liquidity inside a ERIS pool has multiple states:</p>
     </h3>
 </doc-anchor-target>
 <p>As the assets inside the ERIS pool can have multiple different states - explained in <doc-anchor-trigger to="#liquidity-states">Liquidity States</doc-anchor-trigger> - liquidity providers cannot directly withdraw funds, as they might be unbonding at the moment.</p>
-<p>This is why withdrawing liquidity from ERIS will take longer than the unstaking period of the liquid staking providers. For LUNA we will initially set the parameter to 25 days. After the 25 days  the funds can be claimed / withdrawn by the user.</p>
+<p>This is why withdrawing liquidity from ERIS will take longer than the unstaking period of the liquid staking providers. For LUNA we will initially set the parameter to 25 days. After the 25 days the funds can be claimed / withdrawn by the user.</p>
 <p>If the pool has available funds in the original asset (not unbonding), we provide the possibility to immediately withdraw funds for a fee.</p>
 <p>So when you want to withdraw funds immediately from the pool without waiting for the unbonding period (25 days for LUNA) and funds are available you will have to pay a 2 % fee to the pool and 0,1 % to the protocol. The same will be applied linearly if you want to instantly withdraw funds currently unbonding.</p>
 <p>Unbonding liquidity will not earn intrest for you.</p>
@@ -358,7 +358,7 @@ The liquidity inside a ERIS pool has multiple states:</p>
 <th style="text-align: right;"><strong>35 days</strong></th>
 <th style="text-align: right;"><strong>30 days</strong></th>
 <th style="text-align: right;"><strong>25 days</strong></th>
-<th style="text-align: right;"><strong>21 days</strong></th>
+<th style="text-align: right;"><strong>21 days</strong> </th>
 </tr>
 </thead>
 <tbody>
@@ -550,6 +550,6 @@ The liquidity inside a ERIS pool has multiple states:</p>
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Arb Repeater", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Arb Vault", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
