@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.775082195171">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.5.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Alliance Liquidity Hub</title>
+    <meta name="title" content="Alliance Liquidity Hub">
+    <meta name="description" content="The Alliance Liquidity Hub is the central place for Terra based liquidity incentives.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.erisprotocol.com/products/liquidity-hub/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.erisprotocol.com/products/liquidity-hub/">
+    <meta property="og:title" content="Alliance Liquidity Hub">
+    <meta property="og:description" content="The Alliance Liquidity Hub is the central place for Terra based liquidity incentives.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://docs.erisprotocol.com/products/liquidity-hub/">
+    <meta property="twitter:title" content="Alliance Liquidity Hub">
+    <meta property="twitter:description" content="The Alliance Liquidity Hub is the central place for Terra based liquidity incentives.">
+
+    <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+
+    <link href="../../static/logos/favicon.png" rel="icon">
+    <link href="../../resources/css/retype.css?v=3.5.0.775082195171" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.775082195171" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.775082195171" data-turbo-eval="false" defer></script>
+
+    <link href="/static/custom.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+        <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+    
+        <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="docs-sidebar-toggle"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-2xl">
+                            <span class="w-10 mr-2 grow-0 shrink-0 overflow-hidden">
+                                <img class="max-h-10 dark:hidden md:inline-block" src="../../static/logos/logo.png">
+                                <img class="max-h-10 hidden dark:inline-block" src="../../static/logos/logo-dark.png">
+                            </span>
+                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">ERIS</span>
+                        </a>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://erisprotocol.com/" target="_blank">App</a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+                            <input class="w-full h-10 placeholder-gray-400 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 dark:placeholder-dark-400" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
+                        </div>
+        
+                        <!-- Mobile search button -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placeholder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="docs-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <div class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+            
+                <!-- Render this div, if config.showSidebarFilter is `true` -->
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter">
+                </div>
+            
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-dark-650">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650">
+            
+                        <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                            <nav>
+                                <ul class="flex flex-wrap justify-center items-center">
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://erisprotocol.com/" target="_blank">App</a>
+                                    </li>
+            
+                                </ul>
+                            </nav>
+                        </div>
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 dark:bg-dark-850">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="docs-markdown" id="docs-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="docs-sidebar-right-toggle"></div>
+                                <!-- Page content  -->
+<doc-anchor-target id="alliance-liquidity-hub" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#alliance-liquidity-hub">#</doc-anchor-trigger>
+        <span>Alliance Liquidity Hub</span>
+    </h1>
+</doc-anchor-target>
+<p>The Alliance Liquidity Hub is the central place for Terra based liquidity incentives. It converts staking rewards to incentives used for liquidity providers and voters to create a positive liquidity feedback loop.</p>
+<doc-anchor-target id="user-mechanics">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#user-mechanics">#</doc-anchor-trigger>
+        <span>User Mechanics</span>
+    </h2>
+</doc-anchor-target>
+<p>The mechanics of the Alliance Liquidity Hub is similar to existing ve(3,3) model. Instead of directly using token emissions, instead, chain staking rewards are distributed to liquidity providers. In return the Community Pool is acquiring liquidity position assets for building up a permanent chain owned liquidity. This is essential for building a lasting economy with deep liquidity in the ecosystem.</p>
+<p>The following graphic shows participants and stakeholders of the Alliance Liquidity Hub.</p>
+<div class="img-link height-600"><p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><figure class="content-center">
+    <img src="image-2.png" alt="click for fullsize">
+    <figcaption class="caption">click for fullsize</figcaption>
+</figure>
+</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>image-2.png</span>
+    </div>
+    <a href="image-2.png" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+</div>
+<doc-anchor-target id="1-voters">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-voters">#</doc-anchor-trigger>
+        <span>1. Voters</span>
+    </h3>
+</doc-anchor-target>
+<p>Voters lock up LUNA, ampLUNA or bLUNA to create NFT-based locks. These locks will receive a voting power based on the lock time. A full 2 year lock will receive 10x the amount of voting power compared to a 1 week lock. Voting Power always counts the underlying amount of LUNA as fixed base amount. For LUNA it is equal to the lock amount, for LSTs it is lock amount * LST redemption rate, so it is beneficial to use LSTs as lock token.</p>
+<p>Voters can decide how liquidity rewards are being distributed to LP assets. This happens through gauge voting.</p>
+<p>Voters will receive rebases based on the amount of underlying assets they staked and Voting incentives based on incentives provided by projects or by bribe recapture.</p>
+<doc-anchor-target id="2-liquidity-providers">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-liquidity-providers">#</doc-anchor-trigger>
+        <span>2. Liquidity Providers</span>
+    </h3>
+</doc-anchor-target>
+<p>Liquidity Providers bring in liquidity, and receive LP staking rewards. The amount of rewards per LP token is decided by users.</p>
+<doc-anchor-target id="3-projects">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-projects">#</doc-anchor-trigger>
+        <span>3. Projects</span>
+    </h3>
+</doc-anchor-target>
+<p>Projects will be able to get liquidity incentives for their projects LPs. This can be done by either acquiring LUNA / LUNA LSTs for participating in the voting, or through providing bribes to voters, so that voters vote for the projects LP tokens.</p>
+<doc-anchor-target id="4-chain">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4-chain">#</doc-anchor-trigger>
+        <span>4. Chain</span>
+    </h3>
+</doc-anchor-target>
+<p>The chain is using staking rewards to incentivize liquidity. Terra is currently overspending for staking, and this mechanism allows Terra to shift the incentives from staking to liquidity provisioning and liquidity acquiring through a LP specific take rate.</p>
+<doc-anchor-target id="5-traders">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#5-traders">#</doc-anchor-trigger>
+        <span>5. Traders</span>
+    </h3>
+</doc-anchor-target>
+<p>Traders enjoy a lower slippage and deeper liquidity pools for trading.</p>
+<doc-anchor-target id="overview">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#overview">#</doc-anchor-trigger>
+        <span>Overview</span>
+    </h2>
+</doc-anchor-target>
+<div class="img-link height-600"><p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><figure class="content-center">
+    <img src="image-1.png" alt="click for fullsize">
+    <figcaption class="caption">click for fullsize</figcaption>
+</figure>
+</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>image-1.png</span>
+    </div>
+    <a href="image-1.png" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+</div>
+<doc-anchor-target id="glossary">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#glossary">#</doc-anchor-trigger>
+        <span>Glossary</span>
+    </h2>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="compact">
+<thead>
+<tr>
+<th>Abbreviation</th>
+<th>Term</th>
+<th>Definition </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LPs</td>
+<td>Liquidity Providers</td>
+<td>LPs are users who provide funds to DEXes</td>
+</tr>
+<tr>
+<td>VP</td>
+<td>Voting Power</td>
+<td>VP is the amount of influence you have by locking up LUNA or LUNA LST into locks</td>
+</tr>
+<tr>
+<td>LST</td>
+<td>Liquid Staked Token</td>
+<td>Receipt token that can be used to redeem a liquid staking position. This token is accruing value through staking rewards.</td>
+</tr>
+<tr>
+<td>z-asset</td>
+<td>z-asset</td>
+<td>The z-asset is the principle of a LST (e.g. zLUNA), it can be redeemed against the LST. Rewards are not being accrued but used for a specific purpose. In this case as rebase.</td>
+</tr>
+<tr>
+<td>VT</td>
+<td>Virtual Token</td>
+<td>Token that is being created to stake in Alliance Module to receive rewards.</td>
+</tr>
+<tr>
+<td>Epoch</td>
+<td>Epoch</td>
+<td>Epoch is a week period starting from 12 pm UTC Sunday. It defines one round of reward distribution schedule, vote incentives and voting power</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="rewards">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#rewards">#</doc-anchor-trigger>
+        <span>Rewards</span>
+    </h2>
+</doc-anchor-target>
+<p>There are multiple different parts of the product where users and liquidity providers can get rewards for participation:</p>
+<doc-anchor-target id="1-liquidity-incentives">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-liquidity-incentives">#</doc-anchor-trigger>
+        <span>1. Liquidity incentives</span>
+    </h3>
+</doc-anchor-target>
+<p>Alliance staking rewards are converted and distributed as z-assets to liquidity providers. The distribution of the rewards is decided by voters per group of LPs. The liquidity incentives can be claimed on the liquidity tab.</p>
+<doc-anchor-target id="2-voting-incentives">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-voting-incentives">#</doc-anchor-trigger>
+        <span>2. Voting incentives</span>
+    </h3>
+</doc-anchor-target>
+<p>Each epoch, projects and users can add incentives, so that voters are incentivized to vote for the project&#x27;s LPs.</p>
+<doc-anchor-target id="3-rebase">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-rebase">#</doc-anchor-trigger>
+        <span>3. Rebase</span>
+    </h3>
+</doc-anchor-target>
+<p>Rebase are additional rewards going to voters based on the underlying LUNA amount they locked. As liquidity incentives are distributed as z-assets, yield generated by these assets (via liquid staking)</p>
+<doc-anchor-target id="gui">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#gui">#</doc-anchor-trigger>
+        <span>GUI</span>
+    </h2>
+</doc-anchor-target>
+<p>The GUI consists of 4 main tabs</p>
+<doc-anchor-target id="1-liquidity">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-liquidity">#</doc-anchor-trigger>
+        <span>1. Liquidity</span>
+    </h3>
+</doc-anchor-target>
+<p>Liquidity Tab is used for liquidity providers to see current rewards, deposit, withdraw and claim their liquidity incentives.</p>
+<div class="img-link height-300"><p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><figure class="content-center">
+    <img src="image-3.png" alt="click for fullsize">
+    <figcaption class="caption">click for fullsize</figcaption>
+</figure>
+</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>image-3.png</span>
+    </div>
+    <a href="image-3.png" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+</div>
+<p>Available actions:</p>
+<ul>
+<li><strong>Claim</strong>: Users can claim accrued rewards in ampLUNA, bLUNA or LUNA</li>
+</ul>
+<div class="img-link height-300"><p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><figure class="content-center">
+    <img src="image-4.png" alt="click for fullsize">
+    <figcaption class="caption">click for fullsize</figcaption>
+</figure>
+</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>image-4.png</span>
+    </div>
+    <a href="image-4.png" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+</div>
+<ul>
+<li><strong>Deposit</strong>: Depositing / Staking an LP position can be done in four variants:
+<ul>
+<li><strong>Zap</strong>: Use any supported token to &quot;zap&quot; into the LP, this will swap the tokens into the right ratio, create the LP and stake the LP in the Alliance Liquidity Hub.</li>
+<li><strong>Tokens</strong>: Use any of the LP pool tokens to create the LP.</li>
+<li><strong>LP</strong>: Stake already existing LPs</li>
+<li><strong>Staked</strong>: For Astroport LPs can be transferred directly, when they are staked in the Astroport incentive contract.</li>
+</ul>
+</li>
+</ul>
+<div class="img-link height-250"><p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><figure class="content-center">
+    <img src="image-6.png" alt="click for fullsize">
+    <figcaption class="caption">click for fullsize</figcaption>
+</figure>
+</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>image-6.png</span>
+    </div>
+    <a href="image-6.png" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+</div>
+<ul>
+<li><strong>Withdraw</strong>: Withdrawing or unstaking an LP.
+<ul>
+<li><strong>Tokens</strong>: Will withdraw the underlying tokens from the LP</li>
+<li><strong>Zap</strong>: Zap the underlying tokens to a selected output asset. Swaps will be executed.</li>
+<li><strong>LP</strong>: Just return LP tokens. This will allow transferring them to different wallets or staking it natively in each DEX.</li>
+</ul>
+</li>
+</ul>
+<div class="img-link height-300"><p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><figure class="content-center">
+    <img src="image-10.png" alt="click for fullsize">
+    <figcaption class="caption">click for fullsize</figcaption>
+</figure>
+</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>image-10.png</span>
+    </div>
+    <a href="image-10.png" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+</div>
+<doc-anchor-target id="2-vote">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-vote">#</doc-anchor-trigger>
+        <span>2. Vote</span>
+    </h3>
+</doc-anchor-target>
+<p>The vote tab allows users to participate in the voting process. To participate locks are required first (<doc-anchor-trigger to="#3-lock">see lock</doc-anchor-trigger>).</p>
+<p><strong>vAPR</strong> - Annualized rewards for current epoch. The value depends on your personal voting power factor. A lock time of the max 2 years will yield a factor of 10, while a 1 week lock only has a factor 1.</p>
+<div class="img-link height-500"><p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><figure class="content-center">
+    <img src="image-18.png" alt="click for fullsize">
+    <figcaption class="caption">click for fullsize</figcaption>
+</figure>
+</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>image-18.png</span>
+    </div>
+    <a href="image-18.png" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+</div>
+<ul>
+<li><strong>Vote</strong>: To participate in voting, for each asset group, votes need to be locked in, by pressing &quot;decide votes&quot; and distribute your voting power across all assets. Expected vAPR is being shown.</li>
+</ul>
+<div class="img-link height-300"><p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><figure class="content-center">
+    <img src="image-14.png" alt="click for fullsize">
+    <figcaption class="caption">click for fullsize</figcaption>
+</figure>
+</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>image-14.png</span>
+    </div>
+    <a href="image-14.png" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+</div>
+<ul>
+<li><strong>Claim Rebase</strong>: Rebases can be claimed</li>
+<li><strong>Claim Voting Incentives</strong>: Vote incentives per period can be claimed</li>
+</ul>
+<p><figure class="content-center">
+    <img src="image-5.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<doc-anchor-target id="3-lock">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-lock">#</doc-anchor-trigger>
+        <span>3. Lock</span>
+    </h3>
+</doc-anchor-target>
+<p>The lock tab is for creating and managing locks for the user. Locks are the source of voting power and required to participate in the voting process.</p>
+<p>Locks are NFTs based on CW721 and therefore can be used as collateral,</p>
+<div class="img-link height-500"><p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><figure class="content-center">
+    <img src="image-15.png" alt="click for fullsize">
+    <figcaption class="caption">click for fullsize</figcaption>
+</figure>
+</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>image-15.png</span>
+    </div>
+    <a href="image-15.png" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+</div>
+<p>Actions:</p>
+<ul>
+<li><strong>Create</strong>: Creates a new lock</li>
+<li><strong>Withdraw</strong>: If a lock has reached it&#x27;s unlock date, the user can withdraw it.</li>
+<li><strong>Enable auto max-lock</strong>: Converts a lock with a finit time, to an auto max-lock, therefore always keeping the VP at 10x of the underlying LUNA amount.</li>
+<li><strong>Disable auto max-lock</strong>: Converts a lock with an auto max-lock, to a two year lock.</li>
+<li><strong>Increase</strong>: Deposit additional assets into a specific lock</li>
+<li><strong>Extend</strong>: Extend the lock time of a specific lock</li>
+<li><strong>Transfer</strong>: Transfer a specific lock NFT to a different wallet. This user will get full ownership over the lock, including voting power and assets.</li>
+<li><strong>Merge</strong>: Combines two locks, if locks have different end times, the shorter lock will be extended to the longer one before merging. Only locks with the same lock end can be merged.</li>
+<li>(<strong>Split</strong>): Not visible in GUI, but it is possible to split a lock into multiple locks with the same end time.</li>
+</ul>
+<p><figure class="content-center">
+    <img src="image-16.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<doc-anchor-target id="4-incentivize">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4-incentivize">#</doc-anchor-trigger>
+        <span>4. Incentivize</span>
+    </h3>
+</doc-anchor-target>
+<p>Incentivize tab allows projects to add incentives over a specified period of future epochs. This adds incentives for voters to vote in a desired way for the project to get liquidity.</p>
+<p><figure class="content-center">
+    <img src="image-17.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<doc-anchor-target id="technical-details">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#technical-details">#</doc-anchor-trigger>
+        <span>Technical Details</span>
+    </h2>
+</doc-anchor-target>
+<div class="img-link"><p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><figure class="content-center">
+    <img src="image.png" alt="click for fullsize">
+    <figcaption class="caption">click for fullsize</figcaption>
+</figure>
+</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>image.png</span>
+    </div>
+    <a href="image.png" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+</div>
+<doc-anchor-target id="global-config">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#global-config">#</doc-anchor-trigger>
+        <span>global-config</span>
+    </h3>
+</doc-anchor-target>
+<p>The global config contract is responsible for setting ownership of contracts and is an address type registry. It contains an owner who is allowed to call update methods on all contracts and the following specific rights can be setup.</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="compact">
+<thead>
+<tr>
+<th>Right</th>
+<th>Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DELEGATION_CONTROLLER</td>
+<td>Wallets that control connector-alliance delegations</td>
+</tr>
+<tr>
+<td>ASSET_WHITELIST_CONTROLLER</td>
+<td>Wallets that control whitelisted LPs in asset-staking</td>
+</tr>
+<tr>
+<td>BRIBE_WHITELIST_CONTROLLER</td>
+<td>Wallets that control whitelisted bribe assets in bribe-manager</td>
+</tr>
+<tr>
+<td>VE_GUARDIAN</td>
+<td>Wallets that can add or remove users from the voting escrow blacklist</td>
+</tr>
+<tr>
+<td>VOTING_ESCROW</td>
+<td>Contract address of Voting Escrow (used to check caller / call it)</td>
+</tr>
+<tr>
+<td>ASSET_GAUGE</td>
+<td>Contract address of the Asset Gauge (used to check caller / call it)</td>
+</tr>
+<tr>
+<td>BRIBE_MANAGER</td>
+<td>Contract address of the Bribe Manager (used to check caller / call it)</td>
+</tr>
+<tr>
+<td>FREE_BRIBES</td>
+<td>Wallets or contracts that can add bribes without paying a fee</td>
+</tr>
+<tr>
+<td>TAKE_RECIPIENT</td>
+<td>Wallet that receives LP take rate</td>
+</tr>
+<tr>
+<td>FEE_COLLECTOR</td>
+<td>Wallet that receives paid Bribe Fees</td>
+</tr>
+<tr>
+<td>TEAM_WALLET</td>
+<td>Wallet that receives token emissions from connector-emissions</td>
+</tr>
+<tr>
+<td>MINT_PROXY</td>
+<td>Contract that is used if minting tokens via a proxy from connector-emissions</td>
+</tr>
+<tr>
+<td>ASSET_STAKING__{gauge}</td>
+<td>Contract for asset-staking of a specified gauge</td>
+</tr>
+<tr>
+<td>CONNECTOR__{gauge}</td>
+<td>Contract for alliance-connector of a specified gauge</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="voting-escrow">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#voting-escrow">#</doc-anchor-trigger>
+        <span>voting-escrow</span>
+    </h3>
+</doc-anchor-target>
+<p>Users lock up LUNA or LUNA LST to receive voting power. A user can have multiple locks with different lengths and supported assets. Voting-escrow is the manager of these locks, which are represented as NFTs, that can be transferred.</p>
+<doc-anchor-target id="asset-gauge">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#asset-gauge">#</doc-anchor-trigger>
+        <span>asset-gauge</span>
+    </h3>
+</doc-anchor-target>
+<p>asset-gauge is the contract that is indexing the full voting power of a user per period, and how the user voted. Any change in a lock will also be reflected here for the voting power. It is responsible to set the reward distribution based on the voting result to the asset-staking contract.</p>
+<p>Asset-gauge tracks rebases received based on the underlying amount of LUNA a user locked. Rebases are additional rewards for participating in the locking mechanism so that participation beats regular staking.</p>
+<p>Note: Rebases depend on the underlying amount of locked LUNA (LST * redemption rate) and not the Voting Power.</p>
+<doc-anchor-target id="asset-staking">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#asset-staking">#</doc-anchor-trigger>
+        <span>asset-staking</span>
+    </h3>
+</doc-anchor-target>
+<p>asset-staking is tracking the staked LP assets per user and is responsible for distribution rewards set via the distribution schedule. Each group of tokens has their own assets.</p>
+<p>Staked LP positions are being restaked to the underlying DEX if the DEX has staking rewards. The captured rewards are distributed as bribes in the next epoch.</p>
+<doc-anchor-target id="bribe-manager">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bribe-manager">#</doc-anchor-trigger>
+        <span>bribe-manager</span>
+    </h3>
+</doc-anchor-target>
+<p>bribe-manager is used for projects to add incentives for voters to vote in a certain way, e.g. incentivizing their own LPs. The bribes are not directly used for LP incentives and will only influence voter behavior. Bribes only goes to voters who vote for that LP in the corresponding period.</p>
+<doc-anchor-target id="connector-alliance">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#connector-alliance">#</doc-anchor-trigger>
+        <span>connector-alliance</span>
+    </h3>
+</doc-anchor-target>
+<p>connector-alliance is a contract that creates a virtual token (VT), that is then being staked in Alliance Module. Rewards captured through this staking will then be claimed, and distributed as z-assets to asset-staking.</p>
+<p>Staking rewards are not directly distributed as LUNA, but instead liquid staked and so-called z-assets are being distributed to LP stakers. Z-assets (zLUNA) is an interal accounting mechanism to split the tokens into yield and principle of an LSTs. Principle is distributed to LPs as liquidity incentives, while yield is distributed to voters as rebase.</p>
+<p>Using z-assets as LP rewards has these major benefits:</p>
+<ul>
+<li>Vote participants will receive rebases based on liquidity incentives held by asset-staking. While these z-asset rewards are owned and claimable by liquidity providers, they still generate passive revenue, which is being redirected to voters, therefore making active participation in the gauges more profitable than regular staking. This leads to real incentives to participate in the voting mechanism from the start</li>
+<li>Rewards are productively used to create more incentives for voters (more capital efficient)</li>
+<li>Users will be able to withdraw the rewards in ampLUNA (direct) or bLUNA (swap) or LUNA (swap), z-asset (zLUNA) is only an internal accounting mechanism.</li>
+<li>Market sellers will need to pay markup to exit LST -&gt; long term holders are incentivized</li>
+<li>Increased economic activity: Through increased trading activity, LST LPs will receive more trading activity and Arb Vaults increase economic activity (long term LUNA holders)</li>
+</ul>
+<doc-anchor-target id="connector-emissions">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#connector-emissions">#</doc-anchor-trigger>
+        <span>connector-emissions</span>
+    </h3>
+</doc-anchor-target>
+<p>connector-emissions, allows a similar mechanism with the difference, that instead of Alliance Module, a regular token minting process can be used. This is not applied in the Terra Liquidity Alliance, but can be used by projects like URA DEX.</p>
+<doc-anchor-target id="zapper">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#zapper">#</doc-anchor-trigger>
+        <span>zapper</span>
+    </h3>
+</doc-anchor-target>
+<p>Zapper is a refactoring from the Amp Compounder Zapper, with improved routing and functionality.</p>
+<ul>
+<li>It allows converting any list of supported assets into an LP.</li>
+<li>It allows converting an LP into the underlying assets</li>
+<li>It allows converting an LP into any supported asset</li>
+<li>It allows swapping any list of supported assets into another supported asset</li>
+</ul>
+<p>Paths can include any contract or DEX, but are fixed based on the liquidity depth and trying to find the shortest path between two assets. It is not replacing a DEX aggregator, but it will allow simple zapping methods for improved UX.</p>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+                            </div>
+                            <footer class="clear-both">
+                            
+                                <nav class="flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../products/arb-vault/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">Arb Vault</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../vision/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">Vision</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div class="border-t dark:border-dark-650 pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between">
+                                <div>
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                        <li>
+                                            <a class="block mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="https://twitter.com/eris_protocol" target="_blank">Twitter</a>
+                                        </li>
+                                        <li>
+                                            <a class="block mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="https://t.me/eris_protocol" target="_blank">Telegram</a>
+                                        </li>
+                                        <li>
+                                            <a class="block mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="https://github.com/erisprotocol" target="_blank">GitHub</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2024 - Eris Protocol - All rights reserved.</p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="docs-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Alliance Liquidity Hub", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+</body>
+</html>
