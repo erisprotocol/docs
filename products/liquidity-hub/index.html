@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.775082195171">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.775082381301">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -31,11 +31,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../static/logos/favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.5.0.775082195171" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.775082381301" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.775082195171" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.775082381301" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.775082195171" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.775082381301" data-turbo-eval="false" defer></script>
 
     <link href="/static/custom.css" rel="stylesheet" />
 
@@ -266,55 +266,6 @@
     <a href="image-1.png" target="_blank" class="absolute block inset-0"></a>
 </div>
 </p>
-</div>
-<doc-anchor-target id="glossary">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#glossary">#</doc-anchor-trigger>
-        <span>Glossary</span>
-    </h2>
-</doc-anchor-target>
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="compact">
-<thead>
-<tr>
-<th>Abbreviation</th>
-<th>Term</th>
-<th>Definition </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>LPs</td>
-<td>Liquidity Providers</td>
-<td>LPs are users who provide funds to DEXes</td>
-</tr>
-<tr>
-<td>VP</td>
-<td>Voting Power</td>
-<td>VP is the amount of influence you have by locking up LUNA or LUNA LST into locks</td>
-</tr>
-<tr>
-<td>LST</td>
-<td>Liquid Staked Token</td>
-<td>Receipt token that can be used to redeem a liquid staking position. This token is accruing value through staking rewards.</td>
-</tr>
-<tr>
-<td>z-asset</td>
-<td>z-asset</td>
-<td>The z-asset is the principle of a LST (e.g. zLUNA), it can be redeemed against the LST. Rewards are not being accrued but used for a specific purpose. In this case as rebase.</td>
-</tr>
-<tr>
-<td>VT</td>
-<td>Virtual Token</td>
-<td>Token that is being created to stake in Alliance Module to receive rewards.</td>
-</tr>
-<tr>
-<td>Epoch</td>
-<td>Epoch</td>
-<td>Epoch is a week period starting from 12 pm UTC Sunday. It defines one round of reward distribution schedule, vote incentives and voting power</td>
-</tr>
-</tbody>
-</table>
 </div>
 <doc-anchor-target id="rewards">
     <h2>
@@ -739,6 +690,65 @@
 <li>It allows swapping any list of supported assets into another supported asset</li>
 </ul>
 <p>Paths can include any contract or DEX, but are fixed based on the liquidity depth and trying to find the shortest path between two assets. It is not replacing a DEX aggregator, but it will allow simple zapping methods for improved UX.</p>
+<doc-anchor-target id="glossary">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#glossary">#</doc-anchor-trigger>
+        <span>Glossary</span>
+    </h2>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="compact">
+<thead>
+<tr>
+<th>Abbreviation</th>
+<th>Term</th>
+<th>Definition </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LP</td>
+<td>Liquidity Provider</td>
+<td>LPs are users who provide funds to DEXes</td>
+</tr>
+<tr>
+<td>LP</td>
+<td>Liquidity Position</td>
+<td>LP can also be used for a liquidity position, usually also referred to as LP token.</td>
+</tr>
+<tr>
+<td>VP</td>
+<td>Voting Power</td>
+<td>VP is the amount of influence you have by locking up LUNA or LUNA LST into locks</td>
+</tr>
+<tr>
+<td>LST</td>
+<td>Liquid Staked Token</td>
+<td>Receipt token that can be used to redeem a liquid staking position. This token is accruing value through staking rewards.</td>
+</tr>
+<tr>
+<td>z-asset</td>
+<td>z-asset</td>
+<td>The z-asset is the principle of a LST (e.g. zLUNA), it can be redeemed against the LST. Rewards are not being accrued but used for a specific purpose. In this case as rebase.</td>
+</tr>
+<tr>
+<td>VT</td>
+<td>Virtual Token</td>
+<td>Token that is being created to stake in Alliance Module to receive rewards.</td>
+</tr>
+<tr>
+<td>Epoch</td>
+<td>Epoch</td>
+<td>Epoch is a week period starting from 12 pm UTC Sunday. It defines one round of reward distribution schedule, vote incentives and voting power</td>
+</tr>
+<tr>
+<td>Zap</td>
+<td>Zap</td>
+<td>Term used for the convertion of one asset to another with a single transaction, no matter how complex the transaction</td>
+</tr>
+</tbody>
+</table>
+</div>
 
                                 
                                 <!-- Required only on API pages -->
