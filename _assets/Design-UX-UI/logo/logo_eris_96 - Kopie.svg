@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1"
+     baseProfile="tiny"
+     id="Ebene_1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0px"
+     y="0px"
+     width="305px"
+     height="200px"
+     viewBox="-10 -10 305 96"
+     overflow="visible"
+     xml:space="preserve"
+     style="background-color:#000000">
+    <g>
+        <path fill="#FFFFFF"
+              d="M48,4c24.2617,0,44,19.7383,44,44S72.2617,92,48,92S4,72.2617,4,48S23.7383,4,48,4 M48,0C21.4903,0,0,21.4903,0,48&#xA;&#x9;&#x9;s21.4903,48,48,48s48-21.4903,48-48S74.5097,0,48,0L48,0z" />
+        <path fill="#FFFFFF"
+              d="M48,10c20.9533,0,38,17.0467,38,38S68.9533,86,48,86S10,68.9533,10,48S27.0467,10,48,10 M48,8C25.9086,8,8,25.9086,8,48&#xA;&#x9;&#x9;s17.9086,40,40,40s40-17.9086,40-40S70.0914,8,48,8L48,8z" />
+        <line fill="none"
+              stroke="#FFFFFF"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              x1="48"
+              y1="22"
+              x2="48"
+              y2="74" />
+        <path fill="none"
+              stroke="#FFFFFF"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              d="M70,28&#x9;&#x9;c-11.0457,0-20,8.9543-20,20c0,11.0457,8.9543,20,20,20" />
+        <path fill="none"
+              stroke="#FFFFFF"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              d="M26,28&#xA;&#x9;&#x9;c11.0457,0,20,8.9543,20,20c0,11.0457-8.9543,20-20,20" />
+    </g>
+</svg>

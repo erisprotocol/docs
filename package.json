@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "retype watch"
+    "dev": "retype start"
   },
   "dependencies": {}
 }

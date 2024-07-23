@@ -143,3 +143,72 @@ html {
 .minus ul {
   list-style-type: "-  " !important;
 }
+
+.img-link {
+  div {
+    padding: 0px !important;
+  }
+  > div {
+    border: none !important;
+
+    > div:nth-child(2) {
+      display: none;
+    }
+  }
+  .ml-2 {
+    margin-left: 0px !important;
+  }
+  svg {
+    display: none !important;
+  }
+  .content-center {
+    margin-bottom: 0px !important;
+  }
+}
+
+.height-600 {
+  > div {
+    justify-content: center;
+  }
+
+  img {
+    height: 600px;
+  }
+}
+
+.height-500 {
+  > div {
+    justify-content: center;
+  }
+
+  img {
+    height: 500px;
+  }
+}
+
+.height-300 {
+  > div {
+    justify-content: center;
+  }
+  img {
+    height: 300px;
+  }
+}
+
+.height-250 {
+  > div {
+    justify-content: center;
+  }
+  img {
+    height: 250px;
+  }
+}
+
+.height-200 {
+  > div {
+    justify-content: center;
+  }
+  img {
+    height: 200px;
+  }
+}
