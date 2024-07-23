@@ -47,17 +47,6 @@ Traders enjoy a lower slippage and deeper liquidity pools for trading.
 [!ref target="blank" text="![click for fullsize](image-1.png)"](image-1.png)
 :::
 
-## Glossary
-
-| Abbreviation | Term                | Definition { class="compact" }                                                                                                                                                 |
-| ------------ | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| LPs          | Liquidity Providers | LPs are users who provide funds to DEXes                                                                                                                                       |
-| VP           | Voting Power        | VP is the amount of influence you have by locking up LUNA or LUNA LST into locks                                                                                               |
-| LST          | Liquid Staked Token | Receipt token that can be used to redeem a liquid staking position. This token is accruing value through staking rewards.                                                      |
-| z-asset      | z-asset             | The z-asset is the principle of a LST (e.g. zLUNA), it can be redeemed against the LST. Rewards are not being accrued but used for a specific purpose. In this case as rebase. |
-| VT           | Virtual Token       | Token that is being created to stake in Alliance Module to receive rewards.                                                                                                    |
-| Epoch        | Epoch               | Epoch is a week period starting from 12 pm UTC Sunday. It defines one round of reward distribution schedule, vote incentives and voting power                                  |
-
 ## Rewards
 
 There are multiple different parts of the product where users and liquidity providers can get rewards for participation:
@@ -241,3 +230,16 @@ Zapper is a refactoring from the Amp Compounder Zapper, with improved routing an
 - It allows swapping any list of supported assets into another supported asset
 
 Paths can include any contract or DEX, but are fixed based on the liquidity depth and trying to find the shortest path between two assets. It is not replacing a DEX aggregator, but it will allow simple zapping methods for improved UX.
+
+## Glossary
+
+| Abbreviation | Term                | Definition { class="compact" }                                                                                                                                                 |
+| ------------ | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| LP           | Liquidity Provider  | LPs are users who provide funds to DEXes                                                                                                                                       |
+| LP           | Liquidity Position  | LP can also be used for a liquidity position, usually also referred to as LP token.                                                                                            |
+| VP           | Voting Power        | VP is the amount of influence you have by locking up LUNA or LUNA LST into locks                                                                                               |
+| LST          | Liquid Staked Token | Receipt token that can be used to redeem a liquid staking position. This token is accruing value through staking rewards.                                                      |
+| z-asset      | z-asset             | The z-asset is the principle of a LST (e.g. zLUNA), it can be redeemed against the LST. Rewards are not being accrued but used for a specific purpose. In this case as rebase. |
+| VT           | Virtual Token       | Token that is being created to stake in Alliance Module to receive rewards.                                                                                                    |
+| Epoch        | Epoch               | Epoch is a week period starting from 12 pm UTC Sunday. It defines one round of reward distribution schedule, vote incentives and voting power                                  |
+| Zap          | Zap                 | Term used for the convertion of one asset to another with a single transaction, no matter how complex the transaction                                                          |
