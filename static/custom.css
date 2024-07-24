@@ -172,7 +172,7 @@ html {
   }
 
   img {
-    height: 600px;
+    max-height: 600px;
   }
 }
 
@@ -182,7 +182,7 @@ html {
   }
 
   img {
-    height: 500px;
+    max-height: 500px;
   }
 }
 
@@ -191,7 +191,7 @@ html {
     justify-content: center;
   }
   img {
-    height: 300px;
+    max-height: 300px;
   }
 }
 
@@ -200,7 +200,7 @@ html {
     justify-content: center;
   }
   img {
-    height: 250px;
+    max-height: 250px;
   }
 }
 
@@ -209,6 +209,6 @@ html {
     justify-content: center;
   }
   img {
-    height: 200px;
+    max-height: 200px;
   }
 }
