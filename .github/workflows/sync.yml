@@ -1,5 +1,4 @@
-# .github/workflows/github-sync.yml
-name: GitHub Sync (Markdown Only)
+name: GitHub Sync (Markdown Only - Raw Content)
 
 on:
   push:
@@ -19,13 +18,15 @@ jobs:
         with:
           node-version: 20
 
+      - name: Install jq (if not already available)
+        run: sudo apt-get install jq -y
+
       - name: Get changed and deleted Markdown files
         id: changes
         run: |
           echo "Detecting changed Markdown files..."
           git fetch origin ${{ github.event.before }}
 
-          # Only look for *.md files
           CHANGED_FILES=$(git diff --diff-filter=ACMRT --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.md$' || true)
           DELETED_FILES=$(git diff --diff-filter=D --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.md$' || true)
 
@@ -46,8 +47,8 @@ jobs:
           FILES_JSON="[]"
           for file in ${{ env.changed_files }}; do
             if [ -f "$file" ]; then
-              content=$(base64 "$file" | tr -d '\n')
-              FILES_JSON=$(jq --arg path "$file" --arg content "$content" '. + [{path: $path, content: $content}]' <<< "$FILES_JSON")
+              content=$(jq -Rs '.' < "$file")
+              FILES_JSON=$(jq --arg path "$file" --argjson content "$content" '. + [{path: $path, content: $content}]' <<< "$FILES_JSON")
             fi
           done
 
