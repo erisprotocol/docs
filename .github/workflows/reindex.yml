@@ -26,16 +26,15 @@ jobs:
           mkdir temp_sync
 
           FILES_JSON="[]"
-          for file in $(find . -type f -name '*.md'); do
-            # Skip .git folder
-            if [[ "$file" == ./.git/* ]]; then
+          find . -type f -name '*.md' -print0 | while IFS= read -r -d '' file; do
+          if [[ "$file" == ./.git/* ]]; then
               continue
-            fi
+          fi
 
-            relative_path="${file#./}"
-            content=$(jq -Rs '.' < "$file")
+          relative_path="${file#./}"
+          content=$(jq -Rs '.' < "$file")
 
-            FILES_JSON=$(jq --arg path "$relative_path" --argjson content "$content" '. + [{path: $path, content: $content}]' <<< "$FILES_JSON")
+          FILES_JSON=$(jq --arg path "$relative_path" --argjson content "$content" '. + [{path: $path, content: $content}]' <<< "$FILES_JSON")
           done
 
           echo $FILES_JSON > temp_sync/files.json
