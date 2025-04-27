@@ -26,13 +26,16 @@ jobs:
           mkdir temp_sync
 
           FILES_JSON="[]"
-          find . -type f -name '*.md' -print0 | while IFS= read -r -d '' file; do
+
+          mapfile -d '' FILES < <(find . -type f -name '*.md' -print0)
+
+          for file in "${FILES[@]}"; do
             if [[ "$file" == ./.git/* ]]; then
               continue
             fi
 
             relative_path="${file#./}"
-            echo "Found Markdown file: $relative_path"   # <<< LOGGING HERE
+            echo "Found Markdown file: $relative_path"
 
             content=$(jq -Rs '.' < "$file")
 
@@ -42,8 +45,8 @@ jobs:
           echo "Total Markdown files collected: $(jq length <<< "$FILES_JSON")"
           echo $FILES_JSON > temp_sync/files.json
 
-          echo "Final files.json content:"   # <<< Start of final file log
-          cat temp_sync/files.json           # <<< Actually dump it to logs
+          echo "Final files.json content:"
+          cat temp_sync/files.json
 
       - name: Sync to API
         run: |
