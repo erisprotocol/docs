@@ -1,0 +1,77 @@
+# .github/workflows/github-sync.yml
+name: GitHub Sync (Markdown Only)
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  sync_changes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Get changed and deleted Markdown files
+        id: changes
+        run: |
+          echo "Detecting changed Markdown files..."
+          git fetch origin ${{ github.event.before }}
+
+          # Only look for *.md files
+          CHANGED_FILES=$(git diff --diff-filter=ACMRT --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.md$' || true)
+          DELETED_FILES=$(git diff --diff-filter=D --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.md$' || true)
+
+          echo "changed_files<<EOF" >> $GITHUB_ENV
+          echo "$CHANGED_FILES" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+          echo "deleted_files<<EOF" >> $GITHUB_ENV
+          echo "$DELETED_FILES" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Prepare sync payload
+        id: prepare
+        run: |
+          echo "Preparing payload..."
+          mkdir temp_sync
+
+          FILES_JSON="[]"
+          for file in ${{ env.changed_files }}; do
+            if [ -f "$file" ]; then
+              content=$(base64 "$file" | tr -d '\n')
+              FILES_JSON=$(jq --arg path "$file" --arg content "$content" '. + [{path: $path, content: $content}]' <<< "$FILES_JSON")
+            fi
+          done
+
+          DELETED_JSON="[]"
+          for file in ${{ env.deleted_files }}; do
+            DELETED_JSON=$(jq --arg path "$file" '. + [$path]' <<< "$DELETED_JSON")
+          done
+
+          echo $FILES_JSON > temp_sync/files.json
+          echo $DELETED_JSON > temp_sync/deleted.json
+
+      - name: Sync to API
+        run: |
+          echo "Sending sync request..."
+          FILES=$(cat temp_sync/files.json)
+          DELETED=$(cat temp_sync/deleted.json)
+
+          curl -X POST "${{ secrets.SYNC_ENDPOINT_URL }}/github/sync" \
+            -H "Authorization: Bearer ${{ secrets.SYNC_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d @- <<EOF
+          {
+            "repo": "${{ github.repository }}",
+            "files": $FILES,
+            "deleted": $DELETED
+          }
+          EOF
