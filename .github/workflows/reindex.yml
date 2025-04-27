@@ -27,16 +27,19 @@ jobs:
 
           FILES_JSON="[]"
           find . -type f -name '*.md' -print0 | while IFS= read -r -d '' file; do
-          if [[ "$file" == ./.git/* ]]; then
+            if [[ "$file" == ./.git/* ]]; then
               continue
-          fi
+            fi
 
-          relative_path="${file#./}"
-          content=$(jq -Rs '.' < "$file")
+            relative_path="${file#./}"
+            echo "Found Markdown file: $relative_path"   # <<< LOGGING HERE
 
-          FILES_JSON=$(jq --arg path "$relative_path" --argjson content "$content" '. + [{path: $path, content: $content}]' <<< "$FILES_JSON")
+            content=$(jq -Rs '.' < "$file")
+
+            FILES_JSON=$(jq --arg path "$relative_path" --argjson content "$content" '. + [{path: $path, content: $content}]' <<< "$FILES_JSON")
           done
 
+          echo "Total Markdown files collected: $(jq length <<< "$FILES_JSON")"
           echo $FILES_JSON > temp_sync/files.json
 
       - name: Sync to API
