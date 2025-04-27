@@ -1,0 +1,57 @@
+# .github/workflows/github-reindex.yml
+name: GitHub Reindex (Markdown Only)
+
+on:
+  workflow_dispatch: # <- manual trigger from GitHub UI
+
+jobs:
+  reindex_markdown:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install jq (for building JSON)
+        run: sudo apt-get install jq -y
+
+      - name: Prepare all Markdown files
+        run: |
+          echo "Preparing full Markdown file list..."
+          mkdir temp_sync
+
+          FILES_JSON="[]"
+          for file in $(find . -type f -name '*.md'); do
+            # Skip .git folder
+            if [[ "$file" == ./.git/* ]]; then
+              continue
+            fi
+
+            relative_path="${file#./}"
+            content=$(jq -Rs '.' < "$file")
+
+            FILES_JSON=$(jq --arg path "$relative_path" --argjson content "$content" '. + [{path: $path, content: $content}]' <<< "$FILES_JSON")
+          done
+
+          echo $FILES_JSON > temp_sync/files.json
+
+      - name: Sync to API
+        run: |
+          echo "Sending sync request..."
+          FILES=$(cat temp_sync/files.json)
+
+          curl -X POST "${{ secrets.SYNC_ENDPOINT_URL }}/github/sync" \
+            -H "Authorization: Bearer ${{ secrets.SYNC_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d @- <<EOF
+          {
+            "repo": "${{ github.repository }}",
+            "files": $FILES,
+            "deleted": []
+          }
+          EOF
